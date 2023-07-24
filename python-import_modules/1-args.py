@@ -1,17 +1,13 @@
+#!/usr/bin/python3
 import sys
 
 if __name__ == "__main__":
-    # Get the number of arguments
-    num_args = len(sys.argv) - 1
-
-    # Print the number of arguments and the appropriate label
-    if num_args == 0:
-        print("0 arguments.")
-    elif num_args == 1:
-        print("1 argument:")
+    argc = len(sys.argv) - 1
+    if argc == 0:
+        print("{:d} arguments.".format(argc))
+    elif argc == 1:
+        print("{:d} argument:".format(argc))
     else:
-        print("{} arguments:".format(num_args))
-
-    # Print the position and value of each argument
-    for i in range(1, num_args + 1):
-        print("{}: {}".format(i, sys.argv[i]))
+        print("{:d} arguments:".format(argc))
+    for i in range(1, argc + 1):
+        print("{:d}: {}".format(i, sys.argv[i]))
