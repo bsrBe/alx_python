@@ -1,6 +1,6 @@
 class Square:
     """
-    This class defines a square by a private instance attribute __size.
+    This class defines a square by a private instance attribute __size and a public instance method to calculate its area.
     """
     def __init__(self, size=0):
         """
@@ -8,6 +8,8 @@ class Square:
 
         :param size: The size of the square.
         :type size: int
+        :raises TypeError: If size is not an integer.
+        :raises ValueError: If size is less than 0.
         """
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
