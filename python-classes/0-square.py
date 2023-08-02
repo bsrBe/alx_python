@@ -36,8 +36,6 @@ print(mysquare.dict_)
 
 mysquare = Square(3)
 print(type(mysquare))
-print(mysquare.dict_)
-
 try:
     print(mysquare.size)
 except AttributeError as e:
@@ -46,6 +44,6 @@ except AttributeError as e:
 mysquare = Square(3)
 print(type(mysquare))
 try:
-    print(mysquare._size)
+    print(mysquare._Square__size)
 except AttributeError as e:
     print(e)
