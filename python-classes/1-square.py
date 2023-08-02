@@ -25,3 +25,37 @@ class Square:
         :rtype: dict
         """
         return {'size': self.__size}
+
+# Test cases
+mysquare = Square(3)
+print(type(mysquare))
+print(mysquare.dict_)
+
+mysquare = Square(89)
+print(type(mysquare))
+print(mysquare.dict_)
+
+mysquare = Square()
+print(type(mysquare))
+print(mysquare.dict_)
+
+try:
+    mysquare = Square("3")
+    print(type(mysquare))
+    print(mysquare.dict_)
+except Exception as e:
+    print(e)
+
+try:
+    mysquare = Square(3.14)
+    print(type(mysquare))
+    print(mysquare.dict_)
+except Exception as e:
+    print(e)
+
+try:
+    mysquare = Square(-89)
+    print(type(mysquare))
+    print(mysquare.dict_)
+except Exception as e:
+    print(e)
